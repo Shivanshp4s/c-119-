@@ -81,23 +81,23 @@ def create_bot_corpus(words, classes, pattern_word_tags_list, ignore_words):
             stem_words = get_stem_words(words, ignore_words) 
 
     # Remove duplicate words from stem_words
-def create_bot_corpus(stem_words, classes):
 
-    stem_words = sorted(list(set(stem_words)))
-    classes = sorted(list(set(classes)))
 
-    pickle.dump(stem_words, open('words.pkl','wb'))
-    pickle.dump(classes, open('classes.pkl','wb'))
+         stem_words = sorted(list(set(stem_words)))
+         classes = sorted(list(set(classes)))
+
+         pickle.dump(stem_words, open('words.pkl','wb'))
+         pickle.dump(classes, open('classes.pkl','wb'))
 
     
 
     # sort the stem_words list and classes list
-    stem_words,classes = create_bot_corpus(stem_words,classes)
+         stem_words,classes = create_bot_corpus(stem_words,classes)
     
     # print stem_words
-    print('stem_words list : ' , stem_words)
+          print('stem_words list : ' , stem_words)
 
-    return stem_words, classes, pattern_word_tags_list
+          return stem_words, classes, pattern_word_tags_list
 
 
 # Training Dataset: 
